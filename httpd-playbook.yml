@@ -1,0 +1,24 @@
+
+---
+- hosts: target1
+  become: true
+  tasks:
+    - name: Install HTTPD package
+      yum:
+        name: httpd
+        state: present
+    - name: Start Httpd Service
+      service:
+        name: httpd
+        state: started
+    - name: Configuration for httpd service
+      copy:
+        src: /home/ansible/index.html
+        dest: /var/www/html/index.html
+      notify:
+        - Restart HTTPD service
+  handlers:
+  - name: Restart HTTPD service
+    service:
+      name: httpd
+      state: restarted
