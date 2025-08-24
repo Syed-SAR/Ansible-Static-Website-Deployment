@@ -1,5 +1,5 @@
 # Ansible Static Website Deployment
-Deploying A Static Website on Remote Server Using Ansible
+Deploying a Static Website on Remote Server Using Ansible
 
 ![Ansible](https://img.shields.io/badge/Ansible-Automation-blue?logo=ansible)
 ![License](https://img.shields.io/badge/License-MIT-green)
